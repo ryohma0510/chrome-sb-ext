@@ -1,3 +1,5 @@
+console.log("scrapbox.js was loaded.");
+
 chrome.tabs.getCurrent(function(tab) {
     let url = tab.url;
     let title = tab.title;
