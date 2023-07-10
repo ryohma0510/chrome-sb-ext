@@ -1,0 +1,11 @@
+{
+    "manifest_version":3,
+    "name":"Scrapbox",
+    "version":"1.0",
+    "permissions":["tabs"],
+    "browser_action":{
+      "default_title":"Scrapbox",
+      "default_popup":"scrapbox.html"
+    }
+  }
+  
