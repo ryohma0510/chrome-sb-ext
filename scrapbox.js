@@ -1,10 +1,10 @@
-console.log("scrapbox.js was loaded.");
+'use strict'
+{
+  chrome.tabs.query({active: true, lastFocusedWindow:true}, tabs => {
+    const titles = [];
 
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    let tab = tabs[0];
-    let url = tab.url;
-    let title = tab.title;
-
-    console.log(url);
-    console.log(title);
-});
+    for(let i=0; i<tabs.length; i++){
+      console.log(tabs[i].title);
+    }
+  });
+}
