@@ -1,13 +1,10 @@
-getCurrentTab().then((tab) => {
+console.log("scrapbox.js was loaded.");
+
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    let tab = tabs[0];
     let url = tab.url;
     let title = tab.title;
+
     console.log(url);
     console.log(title);
 });
-
-async function getCurrentTab() {
-  let queryOptions = { active: true, lastFocusedWindow: true };
-  // `tab` will either be a `tabs.Tab` instance or `undefined`.
-  let [tab] = await chrome.tabs.query(queryOptions);
-  return tab;
-}
