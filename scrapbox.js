@@ -6,5 +6,5 @@ chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
     let truncatedURL = currentTab.url.slice(0, maxLength) + '...';
 
 
-    document.getElementById('link').innerHTML = truncatedURL;
+    document.getElementById('link').value = truncatedURL;
 });
