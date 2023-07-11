@@ -1,9 +1,4 @@
 'use strict'
-{
-    chrome.tabs.getCurrent(function(tab) {
-        var url = tab.url;
-        var title = tab.title;
-        console.log(url);
-        console.log(title);
-    });
-}
+
+const tabs = await chrome.tabs.getCurrent();
+console.log(tabs[0]);
