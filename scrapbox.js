@@ -1,7 +1,10 @@
 'use strict'
 
 chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+    const maxLength = 20;
     let currentTab = tabs[0];
+    let truncatedURL = currentTab.url.slice(0, maxLength) + '...';
 
-    document.getElementById('title-and-link').innerHTML = "[" + currentTab.title + "|" + currentTab.url + "]";
+
+    document.getElementById('link').innerHTML = truncatedURL;
 });
